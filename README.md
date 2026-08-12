@@ -6,7 +6,7 @@ A single-page portfolio with a separate contact page, built with a techy, IDE-in
 
 ## Live Site
 
-...
+[Click Me](https://habiebanugrahheryza.netlify.app/)
 
 ## Features
 
