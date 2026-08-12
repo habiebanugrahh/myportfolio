@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN TOKENS
+   Theme: techy / modern / professional — "IDE" visual language
+   Signature: hero styled as a live terminal window
+   ============================================================ */
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-body: "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-blue-500: #3d5aff;
+  --color-blue-400: #6b82ff;
+  --color-blue-600: #2438c9;
+  --color-red-500: #ff3b4e;
+  --color-red-400: #ff6b78;
+  --color-red-600: #d61f33;
+}
+
+:root {
+  --bg: #fafbfc;
+  --bg-elevated: #ffffff;
+  --bg-terminal: #f3f5f9;
+  --text: #0f172a;
+  --text-muted: #5b6472;
+  --border: #e3e7ee;
+  --border-strong: #cbd2dd;
+  --code-text: #3b4354;
+}
+
+.dark {
+  --bg: #0a0e17;
+  --bg-elevated: #111827;
+  --bg-terminal: #0d1220;
+  --text: #e5e9f0;
+  --text-muted: #8b94a7;
+  --border: #1f2937;
+  --border-strong: #2a3444;
+  --code-text: #aab3c5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--color-blue-500);
+  color: #fff;
+}
+
+/* Focus visibility (accessibility floor) */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-blue-400);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   UTILITY LAYER — reusable design-system classes
+   ============================================================ */
+.text-primary   { color: var(--text); }
+.text-secondary { color: var(--text-muted); }
+.bg-surface     { background-color: var(--bg); }
+.bg-elevated    { background-color: var(--bg-elevated); }
+.border-hair    { border-color: var(--border); }
+
+.font-display { font-family: var(--font-display); }
+.font-mono    { font-family: var(--font-mono); }
+
+/* Path-style nav label, e.g. ~/about  */
+.nav-path::before {
+  content: "~/";
+  color: var(--color-blue-500);
+  opacity: 0.8;
+}
+
+/* Comment-style section eyebrow, e.g. // about */
+.section-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  color: var(--color-blue-500);
+}
+.section-eyebrow::before {
+  content: "// ";
+  color: var(--text-muted);
+}
+
+/* Terminal window chrome */
+.terminal-dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+/* Blinking cursor for typing animation */
+.cursor {
+  display: inline-block;
+  width: 0.55ch;
+  background: var(--color-red-500);
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Skill / tech tag styled like a dependency entry */
+.tag-dep {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elevated);
+  color: var(--text);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.tag-dep:hover {
+  border-color: var(--color-blue-500);
+  transform: translateY(-2px);
+}
+
+/* Reveal-on-scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-blue-500);
+  box-shadow: 0 12px 30px -12px rgba(61, 90, 255, 0.35);
+}
+
+/* Gradient accent divider (used sparingly) */
+.accent-rule {
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-blue-500), var(--color-red-500));
+}
+
+/* Timeline rail for experience/education */
+.timeline-rail {
+  border-left: 2px solid var(--border);
+}
+.timeline-dot {
+  background: var(--bg);
+  border: 2px solid var(--color-blue-500);
+}
+
+/* Mobile nav slide */
+.mobile-nav {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+.mobile-nav.open {
+  transform: translateX(0);
+}

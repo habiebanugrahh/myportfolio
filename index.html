@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habieb Anugrah Heryza | Personal Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Habieb Anugrah Heryza, Web Developer, Student & Freelancer. Building clean, functional web experiences with HTML, CSS, JS, PHP, Laravel and Tailwind CSS." />
+
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./dist/output.css" />
+</head>
+
+<body class="bg-surface text-primary font-body antialiased">
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="site-header"
+    class="fixed top-0 inset-x-0 z-50 border-b border-hair bg-surface/80 backdrop-blur-md transition-colors">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="font-mono text-lg font-medium text-primary">
+        <span class="text-secondary">&lt;</span>HABIEB<span class="text-secondary">/&gt;</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 font-mono text-sm text-secondary">
+        <a href="#about" class="nav-path hover:text-primary transition-colors">about</a>
+        <a href="#skills" class="nav-path hover:text-primary transition-colors">skills</a>
+        <a href="#projects" class="nav-path hover:text-primary transition-colors">projects</a>
+        <a href="#experience" class="nav-path hover:text-primary transition-colors">experience</a>
+        <a href="#education" class="nav-path hover:text-primary transition-colors">education</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode"
+          class="w-9 h-9 grid place-items-center rounded-md border border-hair text-secondary hover:text-primary hover:border-strong transition-colors">
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+            </svg>
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+        </button>
+
+        <a href="./contact.html"
+          class="hidden sm:inline-flex items-center rounded-md bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium px-4 py-2 transition-colors">
+          Contact
+        </a>
+
+        <button id="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false"
+          class="md:hidden w-9 h-9 grid place-items-center rounded-md border border-hair text-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" /></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav drawer -->
+  <div id="mobile-nav"
+    class="mobile-nav fixed top-16 right-0 bottom-0 w-64 z-40 bg-elevated border-l border-hair md:hidden px-6 py-8">
+    <nav class="flex flex-col gap-6 font-mono text-base text-secondary">
+      <a href="#about" class="nav-path hover:text-primary transition-colors mobile-link">about</a>
+      <a href="#skills" class="nav-path hover:text-primary transition-colors mobile-link">skills</a>
+      <a href="#projects" class="nav-path hover:text-primary transition-colors mobile-link">projects</a>
+      <a href="#experience" class="nav-path hover:text-primary transition-colors mobile-link">experience</a>
+      <a href="#education" class="nav-path hover:text-primary transition-colors mobile-link">education</a>
+      <a href="./contact.html"
+        class="inline-flex items-center justify-center rounded-md bg-blue-500 text-white text-sm font-medium px-4 py-2 mt-2">Contact</a>
+    </nav>
+  </div>
+  <div id="mobile-overlay" class="fixed inset-0 bg-black/40 z-30 hidden md:hidden"></div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative pt-36 pb-24 px-5 sm:px-8 overflow-hidden">
+      <div aria-hidden="true"
+        class="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full blur-3xl opacity-20"
+        style="background: radial-gradient(circle, var(--color-blue-500), transparent 70%)"></div>
+      <div aria-hidden="true"
+        class="pointer-events-none absolute top-40 -left-24 w-80 h-80 rounded-full blur-3xl opacity-10"
+        style="background: radial-gradient(circle, var(--color-red-500), transparent 70%)"></div>
+
+      <div class="max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-14 items-center relative">
+        <div class="reveal">
+          <p class="section-eyebrow mb-4">whoami</p>
+          <h1
+            class="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.08] tracking-tight text-primary">
+            Habieb Anugrah<br />Heryza
+          </h1>
+          <p class="mt-5 font-mono text-sm sm:text-base text-secondary">
+            Web Developer <span class="text-blue-500">|</span> Student <span class="text-blue-500">|</span> Freelancer
+          </p>
+          <p class="mt-6 text-secondary max-w-md leading-relaxed">
+            I build clean, functional web experiences, from static sites to full-stack apps, and I'm always shipping
+            something new to learn from.
+          </p>
+
+          <div class="mt-9 flex flex-wrap items-center gap-4">
+            <a href="#projects"
+              class="inline-flex items-center rounded-md bg-blue-500 hover:bg-blue-600 text-white font-medium px-5 py-3 transition-colors">
+              View Projects
+            </a>
+            <a href="./contact.html"
+              class="inline-flex items-center rounded-md border border-strong hover:border-blue-500 text-primary font-medium px-5 py-3 transition-colors">
+              Get in Touch
+            </a>
+          </div>
+
+          <div class="mt-10 flex items-center gap-5">
+            <a href="https://github.com/habiebanugrahh" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+              class="text-secondary hover:text-blue-500 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.02 1.76 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+                </svg>
+            </a>
+            <a href="https://linkedin.com/in/habieb-anugrah-heryza-165a9a398" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn" class="text-secondary hover:text-blue-500 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.68H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                </svg>
+            </a>
+            <a href="https://instagram.com/habib_ah13" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+              class="text-secondary hover:text-blue-500 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.55.22.95.47 1.37.89.42.42.67.82.89 1.37.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.55-.47.95-.89 1.37-.42.42-.82.67-1.37.89-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.37-.89 3.7 3.7 0 0 1-.89-1.37c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.55.47-.95.89-1.37.42-.42.82-.67 1.37-.89.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .62 4.15c-.3.76-.5 1.63-.56 2.91C0 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.63.5 2.91.56C8.33 24 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84Zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.41-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z" />
+                </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Terminal signature element -->
+        <div class="reveal" style="transition-delay: .1s">
+          <div class="rounded-lg border border-hair overflow-hidden shadow-2xl" style="background: var(--bg-terminal);">
+            <div class="flex items-center gap-2 px-4 py-3 border-b border-hair"
+              style="background: rgba(255,255,255,0.03)">
+              <span class="terminal-dot" style="background:#ff5f56"></span>
+              <span class="terminal-dot" style="background:#ffbd2e"></span>
+              <span class="terminal-dot" style="background:#27c93f"></span>
+              <span class="ml-3 font-mono text-xs" style="color: var(--code-text)">profile.js</span>
+            </div>
+            <div class="p-6 font-mono text-sm leading-7" style="color: var(--code-text)">
+              <pre class="whitespace-pre-wrap"><span id="typed-code"></span><span class="cursor">&nbsp;</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="py-24 px-5 sm:px-8 border-t border-hair">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-[280px_1fr] gap-14 items-start">
+        <div class="reveal mx-auto md:mx-0">
+          <div class="relative w-56 h-56 sm:w-64 sm:h-64">
+            <div class="absolute -top-3 -left-3 font-mono text-blue-500 text-2xl select-none">&lt;</div>
+            <div class="absolute -bottom-3 -right-3 font-mono text-red-500 text-2xl select-none">/&gt;</div>
+            <img src="./assets/images/habieb_anugrah_heryza.png" alt="Portrait of Habieb Anugrah Heryza"
+              class="w-full h-full object-cover rounded-lg border border-hair" />
+          </div>
+        </div>
+
+        <div class="reveal">
+          <p class="section-eyebrow mb-4">about</p>
+          <h2 class="font-display text-3xl font-semibold text-primary mb-6">A developer who likes finishing what he
+            starts.</h2>
+          <div class="space-y-4 text-secondary leading-relaxed max-w-2xl">
+            <p>
+              I'm Habieb, currently studying while building web projects on the side. I work across the stack,
+              comfortable
+              writing structured HTML and expressive interfaces with Tailwind CSS, and just as comfortable wiring up
+              server-side logic in PHP and Laravel.
+            </p>
+            <p>
+              As a freelancer, I care about shipping things that actually work for the people using them, and not just
+              projects that look good in a portfolio. I'm still early in my career, and I treat every project as a
+              chance
+              to get sharper.
+            </p>
+          </div>
+
+          <div class="mt-8 grid grid-cols-3 gap-6 max-w-md font-mono">
+            <div>
+              <p class="text-2xl font-semibold text-primary">7+</p>
+              <p class="text-xs text-secondary mt-1">tools & languages</p>
+            </div>
+            <div>
+              <p class="text-2xl font-semibold text-primary">Student</p>
+              <p class="text-xs text-secondary mt-1">currently learning</p>
+            </div>
+            <div>
+              <p class="text-2xl font-semibold text-primary">Open</p>
+              <p class="text-xs text-secondary mt-1">to freelance work</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="py-24 px-5 sm:px-8 border-t border-hair bg-elevated">
+      <div class="max-w-6xl mx-auto">
+        <p class="section-eyebrow mb-4">skills</p>
+        <h2 class="font-display text-3xl font-semibold text-primary mb-3">package.json - dependencies</h2>
+        <p class="text-secondary max-w-xl mb-10">The languages, frameworks and tools I reach for most.</p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="tag-dep rounded-md px-5 py-4">
+            <p class="text-primary">HTML5</p>
+            <p class="text-secondary text-xs mt-1">markup</p>
+          </div>
+          <div class="tag-dep rounded-md px-5 py-4">
+            <p class="text-primary">CSS3</p>
+            <p class="text-secondary text-xs mt-1">styling</p>
+          </div>
+          <div class="tag-dep rounded-md px-5 py-4">
+            <p class="text-primary">JavaScript</p>
+            <p class="text-secondary text-xs mt-1">language</p>
+          </div>
+          <div class="tag-dep rounded-md px-5 py-4">
+            <p class="text-primary">PHP</p>
+            <p class="text-secondary text-xs mt-1">language</p>
+          </div>
+          <div class="tag-dep rounded-md px-5 py-4">
+            <p class="text-primary">Laravel</p>
+            <p class="text-secondary text-xs mt-1">framework</p>
+          </div>
+          <div class="tag-dep rounded-md px-5 py-4">
+            <p class="text-primary">Tailwind CSS</p>
+            <p class="text-secondary text-xs mt-1">framework</p>
+          </div>
+          <div class="tag-dep rounded-md px-5 py-4">
+            <p class="text-primary">Bootstrap</p>
+            <p class="text-secondary text-xs mt-1">framework</p>
+          </div>
+          <div class="tag-dep rounded-md px-5 py-4">
+            <p class="text-primary">Git</p>
+            <p class="text-secondary text-xs mt-1">tooling</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="py-24 px-5 sm:px-8 border-t border-hair">
+      <div class="max-w-6xl mx-auto">
+        <p class="section-eyebrow mb-4">projects</p>
+        <h2 class="font-display text-3xl font-semibold text-primary mb-3">Selected work</h2>
+        <p class="text-secondary max-w-xl mb-10">A few things I've built. More on GitHub.</p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <article class="card-hover rounded-lg border border-hair bg-elevated overflow-hidden reveal">
+            <div class="aspect-video flex items-center justify-center font-mono text-xs"
+              style="background: var(--bg-terminal); color: var(--code-text);">
+              <img src="./assets/images/listify.png" alt="Listify" class="w-full h-full ">
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-lg font-semibold text-primary">Listify | To-do App</h3>
+              <p class="text-secondary text-sm mt-2 leading-relaxed">
+                A simple task manager with real-time list updates, built with HTML, CSS, and Tailwind CSS on a vanilla JavaScript frontend.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">HTML</span>
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">CSS</span>
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">JavaScript</span>
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">Tailwind CSS</span>
+              </div>
+              <div class="flex items-center gap-4 mt-5">
+                <a href="https://listify-todo-list.netlify.app/"
+                  class="text-sm font-medium text-blue-500 hover:text-blue-400">Live demo →</a>
+                <a href="https://github.com/habiebanugrahh/listify"
+                  class="text-sm font-medium text-secondary hover:text-primary">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-hover rounded-lg border border-hair bg-elevated overflow-hidden reveal"
+            style="transition-delay: .08s">
+            <div class="aspect-video flex items-center justify-center font-mono text-xs"
+              style="background: var(--bg-terminal); color: var(--code-text);">
+              <img src="./assets/images/nuraya.png" alt="Nuraya" class="w-full h-full ">
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-lg font-semibold text-primary">Nuraya | Online Al-Qur'an Reading</h3>
+              <p class="text-secondary text-sm mt-2 leading-relaxed">
+                A responsive website for reading the Qur'an, featuring Arabic text in mushaf mode, Latin transliteration, and more.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">HTML</span>
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">CSS</span>
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">JavaScript</span>
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">Tailwind CSS</span>
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">API</span>
+              </div>
+              <div class="flex items-center gap-4 mt-5">
+                <a href="https://nurayaaa.netlify.app/" class="text-sm font-medium text-blue-500 hover:text-blue-400">Live demo →</a>
+                <a href="https://github.com/habiebanugrahh/nuraya" class="text-sm font-medium text-secondary hover:text-primary">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-hover rounded-lg border border-hair bg-elevated overflow-hidden reveal"
+            style="transition-delay: .16s">
+            <div class="aspect-video flex items-center justify-center font-mono text-xs"
+              style="background: var(--bg-terminal); color: var(--code-text);">
+              <img src="./assets/images/cemara-coffee-co.png" alt="cemara-coffee-co" class="w-full h-full ">
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-lg font-semibold text-primary">Cemara Coffee Co.</h3>
+              <p class="text-secondary text-sm mt-2 leading-relaxed">
+                A multi-page company profile site for a coffee bean shop, focused on clean information architecture and
+                fast load times.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">HTML</span>
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">CSS</span>
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">JavaScript</span>
+                <span class="font-mono text-xs px-2 py-1 rounded border border-hair text-secondary">Tailwind CSS</span>
+              </div>
+              <div class="flex items-center gap-4 mt-5">
+                <a href="https://cemara-coffee-co.netlify.app/" class="text-sm font-medium text-blue-500 hover:text-blue-400">Live demo →</a>
+                <a href="https://github.com/habiebanugrahh/cemara-coffee-co" class="text-sm font-medium text-secondary hover:text-primary">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="py-24 px-5 sm:px-8 border-t border-hair bg-elevated">
+      <div class="max-w-6xl mx-auto max-w-3xl">
+        <p class="section-eyebrow mb-4">experience</p>
+        <h2 class="font-display text-3xl font-semibold text-primary mb-12">Where I've worked</h2>
+
+        <div class="timeline-rail pl-8 space-y-12">
+
+          <div class="relative reveal">
+            <span class="timeline-dot absolute -left-[41px] top-1 w-3.5 h-3.5 rounded-full"></span>
+            <p class="font-mono text-xs text-blue-500 mb-1">2024 — Present</p>
+            <h3 class="font-display text-lg font-semibold text-primary">Freelance Web Developer</h3>
+            <p class="text-secondary text-sm mt-2 leading-relaxed max-w-xl">
+              Building websites and small web apps for independent clients, from static company profiles to
+              PHP-backed tools, handling everything from planning to deployment.
+            </p>
+          </div>
+
+          <div class="relative reveal" style="transition-delay: .08s">
+            <span class="timeline-dot absolute -left-[41px] top-1 w-3.5 h-3.5 rounded-full"></span>
+            <p class="font-mono text-xs text-blue-500 mb-1">2022 — Present</p>
+            <h3 class="font-display text-lg font-semibold text-primary">Independent Projects</h3>
+            <p class="text-secondary text-sm mt-2 leading-relaxed max-w-xl">
+              Designing and shipping personal projects to practice full-stack fundamentals, including Laravel apps and responsive frontends built with Tailwind and Bootstrap.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="education" class="py-24 px-5 sm:px-8 border-t border-hair">
+      <div class="max-w-6xl mx-auto max-w-3xl">
+        <p class="section-eyebrow mb-4">education</p>
+        <h2 class="font-display text-3xl font-semibold text-primary mb-12">Where I've studied</h2>
+
+        <div class="timeline-rail pl-8 space-y-12">
+          <div class="relative reveal">
+            <span class="timeline-dot absolute -left-[41px] top-1 w-3.5 h-3.5 rounded-full"></span>
+            <p class="font-mono text-xs text-blue-500 mb-1">2024 — Present</p>
+            <h3 class="font-display text-lg font-semibold text-primary">Universitas Muhammadiyah Riau</h3>
+            <p class="text-secondary text-sm mt-2 leading-relaxed max-w-xl">
+              Studying programming and software fundamentals, alongside
+              hands-on web development work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-hair py-10 px-5 sm:px-8">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <p class="font-mono text-sm text-secondary">© <span id="year"></span> Habieb Anugrah Heryza. Built with coffee.
+      </p>
+      <div class="flex items-center gap-5">
+        <a href="https://github.com/habiebanugrahh" target="_blank" rel="noopener noreferrer"
+          class="text-secondary hover:text-blue-500 text-sm">GitHub</a>
+        <a href="https://linkedin.com/in/habieb-anugrah-heryza-165a9a398" target="_blank" rel="noopener noreferrer"
+          class="text-secondary hover:text-blue-500 text-sm">LinkedIn</a>
+        <a href="https://instagram.com/habib_ah13" target="_blank" rel="noopener noreferrer"
+          class="text-secondary hover:text-blue-500 text-sm">Instagram</a>
+        <a href="./contact.html" class="text-secondary hover:text-blue-500 text-sm">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
