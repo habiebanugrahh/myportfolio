@@ -41,4 +41,4 @@ I'm a web developer who enjoys building things across the full stack, from stati
 
 ## License
 
-This project is personal portfolio code. Feel free to reference the structure, but please don't republish it as your own portfolio content.
+This project is personal portfolio code. Feel free to reference the structure, but please don't republish it as your own portfolio content. 
