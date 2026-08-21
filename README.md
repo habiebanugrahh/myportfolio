@@ -36,9 +36,9 @@ I'm a web developer who enjoys building things across the full stack, from stati
 ## Connect With Me
 
 - GitHub: [@habiebanugrahh](https://github.com/habiebanugrahh)
-- LinkedIn: [Habieb Anugrah Heryza](https://linkedin.com/in/habieb-anugrah-heryza-165a9a398)
+- LinkedIn: [Habieb Anugrah Heryza](https://linkedin.com/in/habieb-anugrah-heryza)
 - Instagram: [@habib_ah13](https://instagram.com/habib_ah13)
 
 ## License
 
-This project is personal portfolio code. Feel free to reference the structure, but please don't republish it as your own portfolio content. 
+This project is personal portfolio code. Feel free to reference the structure, but please don't republish it as your own portfolio content.
